@@ -232,6 +232,7 @@ namespace ICT3101_Calculator
             return total;
         }
 
+       
         public double NumberExpectedFailuresLogModel(double num1, double num2, double num3)
         {
             double total = (1/num1)* Math.Log(num2 * num1 * num3 + 1);
@@ -249,5 +250,25 @@ namespace ICT3101_Calculator
         {
             return Subtract(Add(num1,num2),num3);
         }
+
+        public double GenMagicNum(double input, IFileReader fileReader)
+        {
+            double result = 0;
+            int choice = Convert.ToInt16(input);
+            //Dependency------------------------------
+            //FileReader getTheMagic = new FileReader();
+            //----------------------------------------
+            //string[] magicStrings = getTheMagic.Read("MagicNumbers.txt");
+            string[] magicStrings = fileReader.Read("C:\\Users\\jiaen\\Desktop\\ICT3101_Calculator\\ICT3101_Calculator\\MagicNumbers.txt");
+
+            if ((choice >= 0) && (choice < magicStrings.Length))
+            {
+                result = Convert.ToDouble(magicStrings[choice]);
+            }
+            result = (result > 0) ? (2 * result) : (-2 * result);
+            return result;
+        }
+     
+
     }
 }

@@ -11,6 +11,8 @@ namespace ICT3101_Calculator
             // Display title as the C# console calculator app.
             Console.WriteLine("Console Calculator in C#\r");
             Console.WriteLine("------------------------\n");
+            IFileReader filereader = new FileReader();
+            Console.WriteLine(_calculator.GenMagicNum(5,filereader));
             while (!endApp)
             {
                 // Declare variables and set to empty.
