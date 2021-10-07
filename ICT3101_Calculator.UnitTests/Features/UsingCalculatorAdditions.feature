@@ -8,7 +8,7 @@
 #	When the two numbers are added
 #	Then the result should be 120
 
-######£££
+######£££www
 
 @Addition
 Scenario: Add two numbers
