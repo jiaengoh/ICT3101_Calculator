@@ -259,7 +259,7 @@ namespace ICT3101_Calculator
             //FileReader getTheMagic = new FileReader();
             //----------------------------------------
             //string[] magicStrings = getTheMagic.Read("MagicNumbers.txt");
-            string[] magicStrings = fileReader.Read("@MagicNumbers.txt");
+            string[] magicStrings = fileReader.Read(@"C:\\Users\\jiaen\\Desktop\\ICT3101_Calculator\\ICT3101_Calculator\\MagicNumbers.txt");
 
             if ((choice >= 0) && (choice < magicStrings.Length))
             {
