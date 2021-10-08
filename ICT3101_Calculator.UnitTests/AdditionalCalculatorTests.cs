@@ -9,16 +9,14 @@ namespace ICT3101_Calculator.UnitTests
     class AdditionalCalculatorTests
     {
         private Calculator _calculator;
-
         private Mock<IFileReader> _mockFileReader;
-
 
         [SetUp]
         public void Setup()
         {
             _mockFileReader = new Mock<IFileReader>();
             _mockFileReader.Setup(fr =>
-            fr.Read("C:\\Users\\jiaen\\Desktop\\ICT3101_Calculator\\ICT3101_Calculator\\MagicNumbers.txt")).Returns(new string[2] { "42", "42" });
+            fr.Read("@MagicNumbers.txt")).Returns(new string[2] { "42", "42" });
             _calculator = new Calculator();
         }
 
